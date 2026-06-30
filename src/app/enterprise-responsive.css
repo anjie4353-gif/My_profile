@@ -1,0 +1,496 @@
+/**
+ * Responsive layout layer — visual/spacing only.
+ * Mobile-first breakpoints; no functionality changes.
+ */
+
+/* ── Foundation ── */
+html {
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: clip;
+  min-width: 0;
+}
+
+.enterprise-site {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.enterprise-site img,
+.enterprise-site svg,
+.enterprise-site video {
+  max-width: 100%;
+}
+
+/* ── Touch targets (min 44px) ── */
+.intro-nav__toggle {
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helping-agent__chip {
+  min-height: 44px;
+  padding: 0.55rem 0.85rem;
+}
+
+.helping-agent__send {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.agent-tab {
+  min-height: 44px;
+  padding: 0 1rem;
+}
+
+.agent-popup__close {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-chip {
+  min-height: 44px;
+}
+
+.orbit-tech {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* ── Typography & text overflow ── */
+.intro-descriptor {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.intro-name {
+  overflow-wrap: anywhere;
+}
+
+/* ── Hero stats ── */
+@media (max-width: 480px) {
+  .intro-stats {
+    gap: 1rem 1.25rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .intro-stat {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 5.5rem;
+  }
+
+  .intro-stat__value {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .intro-stat {
+    flex: 1 1 calc(50% - 0.75rem);
+  }
+}
+
+/* ── Hero grid padding ── */
+@media (max-width: 767px) {
+  .intro-hero__grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.5rem;
+  }
+
+  .intro-portrait-wrap {
+    max-width: min(100%, 280px);
+    height: min(58vh, 420px);
+  }
+
+  .intro-nav__inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .intro-nav__links.is-open .intro-nav__link {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.35rem 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-nav__links.is-open {
+    padding: 1rem 1.25rem 1.25rem;
+    gap: 0.25rem;
+  }
+}
+
+/* ── Chapter sections ── */
+@media (max-width: 1023px) {
+  .chapter-section {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .chapter-section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .chapter-section {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+}
+
+/* ── Tech constellation — prevent horizontal overflow ── */
+.constellation-orbit-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.constellation-orbit {
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .constellation-orbit-wrap {
+    height: calc(min(100vw - 2rem, 520px));
+    align-items: center;
+  }
+
+  .constellation-orbit {
+    transform: scale(calc((min(100vw - 2rem, 520px)) / 520));
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: 767px) {
+  .orbit-tech span.glass-panel {
+    font-size: 0.55rem;
+    padding: 0.3rem 0.45rem;
+    white-space: normal;
+    max-width: 4.75rem;
+    text-align: center;
+    line-height: 1.25;
+  }
+}
+
+/* ── Enterprise viz ── */
+@media (max-width: 767px) {
+  .enterprise-viz {
+    padding: 1rem;
+  }
+
+  .enterprise-viz__svg {
+    min-height: 220px;
+  }
+}
+
+/* ── Stat cards (Chapter 2) ── */
+@media (max-width: 480px) {
+  .stat-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+    padding: 1rem !important;
+  }
+
+  .stat-item span:last-child {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* ── About section ── */
+@media (max-width: 480px) {
+  .about-narrative__highlights {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .about-narrative__panel {
+    padding: 1.15rem 1rem;
+  }
+
+  .about-milestone {
+    grid-template-columns: 2rem 1fr;
+    gap: 0.65rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-section,
+  .exp-section,
+  .edu-section,
+  .contact-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ── Experience section ── */
+@media (max-width: 480px) {
+  .exp-pipeline__stages {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.45rem;
+  }
+
+  .exp-pipeline__stage-label {
+    font-size: 0.52rem;
+  }
+
+  .exp-highlight {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .exp-highlight__metric {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .exp-company-card {
+    padding: 1.1rem 1rem;
+  }
+}
+
+/* ── Education ── */
+@media (max-width: 767px) {
+  .edu-pin {
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .edu-display__image-wrap {
+    height: min(42vh, 320px);
+    min-height: 200px;
+  }
+
+  .edu-display__card {
+    padding: 1.1rem 1rem;
+  }
+}
+
+/* ── Contact section ── */
+@media (max-width: 360px) {
+  .contact-section__grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+/* ── AI Talent Assistant ── */
+@media (max-width: 767px) {
+  .agent-tab {
+    left: 50%;
+    right: auto;
+    bottom: max(0.85rem, env(safe-area-inset-bottom, 0px));
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .agent-popup {
+    bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));
+    width: calc(100vw - 1rem);
+    max-height: min(82vh, 640px);
+  }
+
+  .agent-popup__panel {
+    max-height: min(82vh, 640px);
+  }
+
+  .agent-popup .helping-agent__messages {
+    max-height: min(38vh, 300px);
+  }
+
+  .helping-agent__msg {
+    font-size: 0.7rem;
+    padding: 0.65rem 0.8rem;
+  }
+
+  .helping-agent__form {
+    padding-top: 0.85rem;
+    gap: 0.65rem;
+  }
+
+  .helping-agent__input {
+    min-height: 44px;
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+}
+
+@media (max-width: 360px) {
+  .agent-tab__hint {
+    display: none;
+  }
+
+  .agent-tab__label {
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ── Finale & chapters flex grids ── */
+@media (max-width: 1023px) {
+  .chapter-section .flex.flex-col.lg\:flex-row,
+  .chapter-section .grid.lg\:grid-cols-2 {
+    gap: 2rem;
+  }
+
+  .chapter-section .glass-panel.p-8 {
+    padding: 1.25rem !important;
+  }
+}
+
+/* ── AI capabilities list ── */
+@media (max-width: 480px) {
+  .ai-capability {
+    padding: 0.85rem 1rem !important;
+    min-height: 44px;
+  }
+
+  .ai-capability span {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+}
+
+/* ── Standalone Contact / Resume pages ── */
+@media (max-width: 767px) {
+  .min-h-screen.bg-\[\#030712\] header > div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .min-h-screen.bg-\[\#030712\] main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .min-h-screen.bg-\[\#030712\] .glass-panel {
+    padding: 1.25rem !important;
+  }
+
+  .min-h-screen.bg-\[\#030712\] input,
+  .min-h-screen.bg-\[\#030712\] textarea {
+    font-size: 16px;
+  }
+
+  .min-h-screen.bg-\[\#030712\] button[type="submit"] {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .min-h-screen.bg-\[\#030712\] header .flex-col {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .min-h-screen.bg-\[\#030712\] header .flex-wrap {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* ── Large desktop — comfortable max-width ── */
+@media (min-width: 1600px) {
+  .intro-hero__grid,
+  .intro-skills,
+  .about-section__inner,
+  .exp-section__inner,
+  .edu-section__inner,
+  .contact-section__inner {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .intro-hero__grid,
+  .intro-skills,
+  .about-section__inner,
+  .exp-section__inner,
+  .edu-section__inner,
+  .contact-section__inner {
+    max-width: 1480px;
+  }
+}
+
+/* ── Command center dashboard ── */
+@media (max-width: 640px) {
+  .chapter-section .glass-panel > .flex.items-center.justify-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* ── Finale scene ── */
+@media (max-width: 767px) {
+  .chapter-section.min-h-screen,
+  section.min-h-screen {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ── Chapter titles ── */
+@media (max-width: 360px) {
+  .chapter-animate.text-3xl {
+    font-size: 1.65rem !important;
+    line-height: 1.15;
+  }
+}
+
+/* ── Migration diagram cards ── */
+@media (max-width: 767px) {
+  .source-system.glass-panel,
+  .target-system.glass-panel {
+    padding: 1.25rem !important;
+  }
+
+  .exp-company-card__logo {
+    aspect-ratio: 16 / 9;
+    max-height: 11rem;
+  }
+}
+
+/* ── Prevent flex children overflow site-wide ── */
+.enterprise-site .flex,
+.enterprise-site .grid {
+  min-width: 0;
+}
