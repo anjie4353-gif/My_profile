@@ -143,17 +143,17 @@
   }
 
   .intro-portrait-wrap {
-    width: 200px;
-    max-width: 200px;
-    height: 260px;
-    margin: 0 auto;
-    padding: 0.4rem;
-    border: 2px solid rgba(37, 99, 235, 0.55);
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.65);
-    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.14);
-    align-items: center;
-    filter: none;
+    width: 180px !important;
+    max-width: 180px !important;
+    height: 234px !important;
+    margin: 0 auto !important;
+    padding: 0.3rem !important;
+    border: 2px solid rgba(37, 99, 235, 0.6) !important;
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.16) !important;
+    align-items: center !important;
+    filter: none !important;
   }
 
   .intro-portrait-img {
@@ -161,30 +161,48 @@
     height: 100% !important;
     object-fit: cover !important;
     object-position: top center !important;
-    border-radius: 10px;
+    border-radius: 8px !important;
     -webkit-mask-image: none !important;
     mask-image: none !important;
   }
 
-  /* Slightly larger readable body text */
+  /* Readable body text on small screens */
   .intro-descriptor {
-    font-size: 0.88rem !important;
+    font-size: 0.86rem !important;
     line-height: 1.7 !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
   }
 
   .intro-kicker,
   .intro-stat__label,
   .intro-skills__label {
-    font-size: 0.62rem !important;
+    font-size: 0.64rem !important;
     letter-spacing: 0.2em !important;
+    font-weight: 700 !important;
   }
 
   .intro-stat__value {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
   }
 
   .intro-name {
-    font-size: clamp(2rem, 9vw, 2.75rem) !important;
+    font-size: clamp(1.85rem, 8vw, 2.5rem) !important;
+    font-weight: 700 !important;
+  }
+
+  .intro-hero__content-col {
+    border: 2px solid rgba(37, 99, 235, 0.45) !important;
+    border-radius: 14px !important;
+    padding: 1.15rem 1rem 1.25rem !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+  }
+
+  .intro-btn {
+    font-weight: 700 !important;
+    border: 2px solid rgba(37, 99, 235, 0.4) !important;
+    color: #000000 !important;
   }
 
   .intro-rule {

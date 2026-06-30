@@ -53,26 +53,43 @@
 
 .enterprise-site p,
 .enterprise-site li,
-.enterprise-site span:not(.intro-stat__value):not(.metric-value) {
-  color: var(--text-body);
+.enterprise-site span:not(.intro-stat__value):not(.metric-value),
+.enterprise-site label,
+.enterprise-site time,
+.enterprise-site .intro-kicker,
+.enterprise-site .intro-descriptor,
+.enterprise-site .intro-stat__label,
+.enterprise-site .intro-skill-item,
+.enterprise-site .about-milestone__detail,
+.enterprise-site .about-narrative__paragraph,
+.enterprise-site .exp-section__subtitle,
+.enterprise-site .exp-company-card__summary,
+.enterprise-site .exp-highlight__desc,
+.enterprise-site .edu-stage__school,
+.enterprise-site .edu-display__address,
+.enterprise-site .contact-section__sub {
+  color: #0a0a0a;
   font-weight: 600;
 }
 
 .enterprise-site .glass-panel,
 .enterprise-site .intro-hero__content-col,
+.enterprise-site .intro-portrait-wrap,
 .enterprise-site .about-milestone__card,
 .enterprise-site .about-narrative__panel,
 .enterprise-site .about-highlight,
 .enterprise-site .exp-company-card,
 .enterprise-site .exp-highlight,
 .enterprise-site .edu-display__card,
+.enterprise-site .edu-display__image-wrap,
 .enterprise-site .edu-stage--active,
 .enterprise-site .contact-section__inner,
 .enterprise-site .helping-agent,
 .enterprise-site .intro-skills__row,
-.enterprise-site .resume-panel {
-  border: 2px solid rgba(37, 99, 235, 0.35);
-  box-shadow: 0 0 14px rgba(37, 99, 235, 0.08);
+.enterprise-site .resume-panel,
+.enterprise-site .intro-descriptor {
+  border: 2px solid rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 14px rgba(37, 99, 235, 0.1);
 }
 
 .enterprise-site .text-spark-line {
