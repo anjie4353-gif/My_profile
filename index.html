@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Anjaneyulu Pallepagu — Senior Data & AI Engineer. Enterprise data platforms, AI systems, and intelligent automation."
+    />
+    <title>Anjaneyulu Pallepagu | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav" role="banner">
+      <nav class="nav__inner" aria-label="Primary">
+        <a href="#intro" class="nav__brand" id="nav-brand">PORTFOLIO</a>
+        <button
+          type="button"
+          class="nav__toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Toggle navigation"
+          id="nav-toggle"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__links" id="nav-menu">
+          <li><a href="#work" class="nav__link">WORK</a></li>
+          <li><a href="#about" class="nav__link">ABOUT</a></li>
+          <li><a href="#resume" class="nav__link">RESUME</a></li>
+          <li><a href="#contact" class="nav__link">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro" class="hero">
+        <div class="hero__grid">
+          <div class="hero__portrait" data-reveal>
+            <div class="portrait-wrap" id="portrait-wrap">
+              <img
+                id="portrait-img"
+                class="portrait-img"
+                src="assets/profile.png"
+                alt=""
+                width="380"
+                height="520"
+              />
+            </div>
+          </div>
+
+          <div class="hero__content">
+            <p class="kicker" data-reveal id="hero-kicker">SELECTED WORKS · 2026</p>
+
+            <h1 class="name" data-reveal>
+              <span id="name-line1">ANJANEYULU</span>
+              <span id="name-line2">PALLEPAGU</span>
+            </h1>
+
+            <p class="role" data-reveal id="hero-role">Senior Data &amp; AI Engineer</p>
+            <p class="tagline" data-reveal id="hero-tagline"></p>
+
+            <div class="actions" data-reveal>
+              <a href="#work" class="btn btn--primary">View Work</a>
+              <a
+                href="assets/resume.pdf"
+                class="btn btn--ghost"
+                id="resume-download"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Download Resume</a>
+            </div>
+
+            <div class="stats" data-reveal id="stats"></div>
+
+            <aside class="helping-agent" id="helpingAgent" data-reveal>
+              <div class="helping-agent__header">
+                <div class="helping-agent__avatar" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <circle cx="12" cy="8" r="3.5" />
+                    <path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="helping-agent__title" id="agent-title">Helping Agent</p>
+                  <p class="helping-agent__greeting" id="agent-greeting">How can I help you today?</p>
+                </div>
+              </div>
+              <div class="helping-agent__messages" id="agent-messages" aria-live="polite" hidden></div>
+              <form class="helping-agent__form" id="agent-form">
+                <input
+                  type="text"
+                  class="helping-agent__input"
+                  id="agent-input"
+                  placeholder="Ask about experience, skills, or projects…"
+                  aria-label="Message to helping agent"
+                />
+                <button type="submit" class="helping-agent__send" aria-label="Send message">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </button>
+              </form>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <p class="section__kicker" data-reveal>Selected Projects</p>
+        <div class="section__rule" data-reveal aria-hidden="true"></div>
+        <h2 class="section__title" data-reveal>Work</h2>
+        <div class="work-grid" id="work-grid" data-reveal></div>
+      </section>
+
+      <section id="about" class="section">
+        <p class="section__kicker" data-reveal>Profile</p>
+        <div class="section__rule" data-reveal aria-hidden="true"></div>
+        <h2 class="section__title" data-reveal id="about-headline"></h2>
+        <div class="about__text" id="about-text" data-reveal></div>
+      </section>
+
+      <section id="resume" class="section">
+        <p class="section__kicker" data-reveal>Credentials</p>
+        <div class="section__rule" data-reveal aria-hidden="true"></div>
+        <h2 class="section__title" data-reveal>Resume</h2>
+        <div class="resume-panel" data-reveal>
+          <p>Full professional history — data engineering, AI systems, and enterprise architecture.</p>
+          <a href="assets/resume.pdf" class="btn btn--ghost" id="resume-inline" target="_blank" rel="noopener noreferrer">Download PDF</a>
+          <iframe class="resume-embed" id="resume-embed" title="Resume PDF preview" src=""></iframe>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <p class="section__kicker" data-reveal>Get in Touch</p>
+        <div class="section__rule" data-reveal aria-hidden="true"></div>
+        <h2 class="section__title" data-reveal>Contact</h2>
+        <div class="contact-grid" data-reveal>
+          <div>
+            <a href="#" class="contact__email" id="contact-email"></a>
+          </div>
+          <div class="social-links" id="social-links"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footer-text"></p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
