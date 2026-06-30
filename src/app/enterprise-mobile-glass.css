@@ -1,92 +1,92 @@
 /**
- * Mobile-only premium glassmorphism layer (max-width: 767px).
- * Visual overrides only — no functionality changes.
+ * Mobile readability layer (max-width: 767px).
+ * Keeps the light enterprise theme — dark bold text + blue border highlights.
  */
 
 @media (max-width: 767px) {
-  :root {
-    --mglass-bg: rgba(255, 255, 255, 0.12);
-    --mglass-bg-strong: rgba(255, 255, 255, 0.16);
-    --mglass-border: rgba(255, 255, 255, 0.15);
-    --mglass-blur: 32px;
-    --mglass-radius: 32px;
-    --mglass-radius-sm: 28px;
-    --mglass-text: #ffffff;
-    --mglass-text-muted: rgba(255, 255, 255, 0.75);
-    --mglass-charcoal: #1a1a1c;
-    --mglass-warm: rgba(255, 196, 140, 0.22);
-    --mglass-ease: cubic-bezier(0.4, 0, 0.2, 1);
-    --mglass-transition: 300ms var(--mglass-ease);
-  }
-
   body {
-    background: var(--mglass-charcoal);
+    background: linear-gradient(160deg, #d4dae3 0%, #b8c0cc 45%, #9aa3b0 100%) !important;
+    background-attachment: fixed !important;
+    color: #0a0a0a !important;
+    -webkit-text-size-adjust: 100%;
   }
 
   .enterprise-site {
-    position: relative;
-    isolation: isolate;
     background: transparent !important;
-    color: var(--mglass-text);
-    font-family: var(--font-poppins), var(--font-inter), system-ui, sans-serif;
+    color: #0a0a0a !important;
+    font-family: var(--font-dm), var(--font-inter), system-ui, sans-serif !important;
   }
 
-  .enterprise-site::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url("/images/background.jpg") center center / cover no-repeat;
-    z-index: -2;
-    transform: scale(1.02);
-  }
-
+  .enterprise-site::before,
   .enterprise-site::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(10, 10, 12, 0.28) 0%,
-      rgba(14, 14, 16, 0.42) 45%,
-      rgba(8, 8, 10, 0.68) 100%
-    );
-    z-index: -1;
+    display: none !important;
   }
 
-  /* Typography */
+  /* Dark black bold text — high contrast on light background */
   .enterprise-site h1,
   .enterprise-site h2,
   .enterprise-site h3,
   .enterprise-site h4,
   .enterprise-site p,
   .enterprise-site li,
-  .enterprise-site span,
   .enterprise-site a,
+  .enterprise-site label,
   .enterprise-site time,
-  .enterprise-site label {
-    color: var(--mglass-text);
+  .enterprise-site .intro-kicker,
+  .enterprise-site .intro-descriptor,
+  .enterprise-site .intro-descriptor__lead,
+  .enterprise-site .intro-stat__value,
+  .enterprise-site .intro-stat__label,
+  .enterprise-site .intro-skill-item,
+  .enterprise-site .intro-skills__category,
+  .enterprise-site .intro-skills__label,
+  .enterprise-site .intro-nav__brand,
+  .enterprise-site .intro-nav__link,
+  .enterprise-site .contact-chip,
+  .enterprise-site .helping-agent__title,
+  .enterprise-site .helping-agent__greeting,
+  .enterprise-site .helping-agent__msg,
+  .enterprise-site .helping-agent__chip,
+  .enterprise-site .text-white,
+  .enterprise-site .text-white\/90,
+  .enterprise-site .text-white\/80,
+  .enterprise-site .text-white\/60,
+  .enterprise-site .text-white\/50,
+  .enterprise-site .text-white\/40,
+  .enterprise-site .text-white\/30 {
+    color: #0a0a0a !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+    animation: none !important;
+    -webkit-text-fill-color: #0a0a0a !important;
   }
 
-  .enterprise-site .text-spark,
-  .enterprise-site h1,
-  .enterprise-site h2,
-  .enterprise-site h3,
-  .enterprise-site .font-bold,
-  .enterprise-site .font-semibold,
-  .enterprise-site .text-glow,
+  .enterprise-site .intro-name,
   .enterprise-site .contact-section__title,
   .enterprise-site .about-section__title,
-  .enterprise-site .exp-section__title,
-  .enterprise-site .intro-name {
-    color: var(--mglass-text) !important;
-    animation: none !important;
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35), 0 0 24px var(--mglass-warm) !important;
+  .enterprise-site .exp-section__title {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.25) !important;
   }
 
-  /* Shared glass surface */
+  .enterprise-site .text-highlight,
+  .enterprise-site .text-primary,
+  .enterprise-site .text-accent,
+  .enterprise-site .intro-descriptor__pipe,
+  .enterprise-site .about-milestone__year,
+  .enterprise-site .exp-company-card__role,
+  .enterprise-site .edu-stage__year,
+  .enterprise-site .edu-display__year,
+  .enterprise-site .exp-highlight__metric-value {
+    color: #1d4ed8 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Blue border highlight on content panels */
   .enterprise-site .glass-panel,
-  .helping-agent,
   .intro-hero__content-col,
+  .helping-agent,
   .about-milestone__card,
   .about-narrative__panel,
   .about-highlight,
@@ -100,315 +100,143 @@
   .enterprise-viz,
   .intro-skills__row,
   .chapter-section .glass-panel,
-  .stat-item {
-    background: var(--mglass-bg) !important;
-    backdrop-filter: blur(var(--mglass-blur)) !important;
-    -webkit-backdrop-filter: blur(var(--mglass-blur)) !important;
-    border: 1px solid var(--mglass-border) !important;
-    border-radius: var(--mglass-radius) !important;
+  .stat-item,
+  .agent-popup__panel {
+    background: rgba(255, 255, 255, 0.78) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 2px solid rgba(37, 99, 235, 0.45) !important;
+    border-radius: 16px !important;
     box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.22),
-      inset 0 1px 0 rgba(255, 255, 255, 0.14),
-      inset 0 0 24px rgba(255, 255, 255, 0.04) !important;
+      0 4px 18px rgba(37, 99, 235, 0.1),
+      inset 0 0 0 1px rgba(37, 99, 235, 0.08) !important;
   }
 
-  .intro-skills__row {
-    border-radius: var(--mglass-radius-sm) !important;
-    padding: 1rem !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-  }
-
-  /* Nav */
+  /* Nav — readable on mobile */
   .intro-nav,
   .intro-nav--scrolled {
-    background: rgba(255, 255, 255, 0.08) !important;
-    backdrop-filter: blur(28px) !important;
-    -webkit-backdrop-filter: blur(28px) !important;
-    border-bottom: 1px solid var(--mglass-border) !important;
-  }
-
-  .intro-nav__brand,
-  .intro-nav__link {
-    color: var(--mglass-text) !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 2px solid rgba(37, 99, 235, 0.35) !important;
   }
 
   .intro-nav__links.is-open {
-    background: rgba(20, 20, 22, 0.55) !important;
-    backdrop-filter: blur(36px) !important;
-    border-bottom: 1px solid var(--mglass-border) !important;
-    border-radius: 0 0 var(--mglass-radius-sm) var(--mglass-radius-sm);
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 2px solid rgba(37, 99, 235, 0.35) !important;
   }
 
   .intro-nav__toggle span {
-    background: var(--mglass-text) !important;
+    background: #0a0a0a !important;
   }
 
-  /* Hero landing */
-  .intro-hero {
-    min-height: 100dvh;
-    padding-bottom: 1.5rem;
-  }
-
-  .intro-hero__grid {
-    gap: 1.25rem;
-    padding-bottom: 0.5rem;
+  /* Hero — medium official portrait */
+  .intro-hero__portrait-col {
+    order: 1;
+    padding-top: 0.5rem;
   }
 
   .intro-hero__content-col {
-    padding: 1.35rem 1.25rem 1.5rem !important;
-    margin-top: 0.25rem;
+    order: 2;
+    padding: 1.15rem 1rem 1.25rem !important;
+    margin-top: 0;
+  }
+
+  .intro-portrait-wrap {
+    width: 200px;
+    max-width: 200px;
+    height: 260px;
+    margin: 0 auto;
+    padding: 0.4rem;
+    border: 2px solid rgba(37, 99, 235, 0.55);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.14);
+    align-items: center;
+    filter: none;
+  }
+
+  .intro-portrait-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    border-radius: 10px;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
+  /* Slightly larger readable body text */
+  .intro-descriptor {
+    font-size: 0.88rem !important;
+    line-height: 1.7 !important;
   }
 
   .intro-kicker,
-  .intro-descriptor,
-  .intro-descriptor__pipe,
   .intro-stat__label,
-  .intro-skills__label,
-  .intro-skills__category,
-  .intro-skill-item {
-    color: var(--mglass-text-muted) !important;
+  .intro-skills__label {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.2em !important;
   }
 
-  .intro-descriptor__lead,
-  .intro-role,
   .intro-stat__value {
-    color: var(--mglass-text) !important;
+    font-size: 1.5rem !important;
+  }
+
+  .intro-name {
+    font-size: clamp(2rem, 9vw, 2.75rem) !important;
   }
 
   .intro-rule {
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent) !important;
-    box-shadow: 0 0 12px var(--mglass-warm) !important;
+    background: linear-gradient(90deg, var(--accent), transparent) !important;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.35) !important;
   }
 
-  .intro-scroll__label {
-    color: var(--mglass-text-muted) !important;
-  }
-
-  .intro-scroll__arrow-wrap {
-    color: var(--mglass-text) !important;
-  }
-
-  /* Helping agent — glass form */
-  .helping-agent {
-    max-width: 100%;
-    padding: 1.25rem !important;
-    border-radius: var(--mglass-radius) !important;
-  }
-
-  .helping-agent__greeting,
-  .helping-agent__msg--agent,
-  .helping-agent__suggestions-label {
-    color: var(--mglass-text-muted) !important;
-  }
-
-  .helping-agent__chip {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid var(--mglass-border) !important;
-    color: var(--mglass-text) !important;
-    backdrop-filter: blur(16px) !important;
-  }
-
-  .helping-agent__msg--user {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 16px;
-    color: var(--mglass-text) !important;
-  }
-
-  .helping-agent__form {
-    border-top: 1px solid var(--mglass-border) !important;
-    gap: 0.65rem;
-    align-items: center;
-  }
-
-  .helping-agent__input {
-    min-height: 52px;
-    padding: 0 1rem 0 2.75rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid var(--mglass-border) !important;
-    color: var(--mglass-text) !important;
-    transition: box-shadow var(--mglass-transition), border-color var(--mglass-transition);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.65)' stroke-width='1.5'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: 1rem center;
-  }
-
-  .helping-agent__input::placeholder {
-    color: rgba(255, 255, 255, 0.55) !important;
-  }
-
-  .helping-agent__input:focus {
-    outline: none;
-    border-color: rgba(255, 255, 255, 0.35) !important;
-    box-shadow: 0 0 0 3px rgba(255, 196, 140, 0.18);
-  }
-
-  .helping-agent__send {
-    width: 52px !important;
-    height: 52px !important;
-    min-width: 52px;
-    border-radius: 999px !important;
-    background: var(--mglass-bg-strong) !important;
-    backdrop-filter: blur(20px) !important;
-    border: 1px solid var(--mglass-border) !important;
-    color: var(--mglass-text) !important;
-    transition: transform var(--mglass-transition), box-shadow var(--mglass-transition);
-  }
-
-  .helping-agent__send:active {
-    transform: scale(0.96);
-  }
-
-  /* Contact — glass CTA pills */
-  .contact-section__inner {
-    padding: 1.75rem 1.25rem !important;
-  }
-
-  .contact-section__kicker,
-  .contact-section__sub,
-  .contact-section__phone,
-  .about-section__kicker,
-  .exp-section__kicker,
-  .edu-timeline__hint {
-    color: var(--mglass-text-muted) !important;
-  }
-
+  /* Contact chips */
   .contact-chip {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 52px;
-    border-radius: 999px !important;
-    background: var(--mglass-bg-strong) !important;
-    backdrop-filter: blur(28px) !important;
-    border: 1px solid var(--mglass-border) !important;
-    color: var(--mglass-text) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-    transition: transform var(--mglass-transition), box-shadow var(--mglass-transition), background var(--mglass-transition);
-  }
-
-  .contact-chip:active {
-    transform: scale(0.97);
+    border: 2px solid rgba(37, 99, 235, 0.4) !important;
+    background: rgba(255, 255, 255, 0.82) !important;
+    font-weight: 600 !important;
   }
 
   .contact-chip:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
-    color: var(--mglass-text) !important;
-    border-color: rgba(255, 255, 255, 0.28) !important;
+    border-color: #2563eb !important;
+    color: #1d4ed8 !important;
   }
 
-  /* About / Experience / Education sections */
-  .about-section__rule,
-  .exp-section__rule,
-  .edu-section .text-spark-line {
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent) !important;
+  /* Agent tab */
+  .agent-tab {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid rgba(37, 99, 235, 0.4) !important;
   }
 
-  .about-milestone__year,
-  .exp-company-card__role,
-  .edu-stage__year,
-  .edu-display__year,
-  .exp-highlight__metric-value {
-    color: rgba(255, 220, 180, 0.95) !important;
-    text-shadow: 0 0 12px var(--mglass-warm) !important;
+  .agent-tab__label,
+  .agent-tab__hint {
+    color: #0a0a0a !important;
+    font-weight: 600 !important;
   }
 
-  .about-narrative__desc,
-  .exp-company-card__summary,
-  .edu-display__desc,
-  .exp-highlight__desc {
-    color: var(--mglass-text-muted) !important;
-    border-top-color: var(--mglass-border) !important;
-  }
-
-  .edu-display__image-wrap {
-    background: rgba(255, 255, 255, 0.08) !important;
-  }
-
-  .edu-stage {
-    opacity: 0.55;
-  }
-
-  .edu-stage--active {
-    opacity: 1;
-  }
-
-  .edu-stage--done .edu-stage__marker {
-    background: rgba(255, 200, 150, 0.85) !important;
-  }
-
-  .edu-timeline__fill {
-    background: linear-gradient(to bottom, rgba(255, 200, 150, 0.9), rgba(255, 255, 255, 0.5)) !important;
-  }
-
-  /* Chapter sections */
-  .chapter-section {
-    color: var(--mglass-text) !important;
-  }
-
-  .enterprise-site .text-white\/30,
-  .enterprise-site .text-white\/40,
-  .enterprise-site .text-white\/50,
-  .enterprise-site .text-white\/60 {
-    color: var(--mglass-text-muted) !important;
-  }
-
-  /* Skills track fades */
+  /* Skills track fades — match light bg */
   .intro-skills__track::before {
-    background: linear-gradient(to right, rgba(18, 18, 20, 0.85), transparent) !important;
+    background: linear-gradient(to right, #d4dae3 15%, transparent) !important;
   }
 
   .intro-skills__track::after {
-    background: linear-gradient(to left, rgba(18, 18, 20, 0.85), transparent) !important;
+    background: linear-gradient(to left, #b8c0cc 15%, transparent) !important;
   }
 
   .intro-skills__category::before {
-    background: rgba(255, 200, 150, 0.9) !important;
-    box-shadow: 0 0 10px var(--mglass-warm) !important;
+    background: #2563eb !important;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.4) !important;
   }
 
-  /* Constellation mobile */
   .constellation-lines line {
-    stroke: rgba(255, 255, 255, 0.35) !important;
+    stroke: #0a0a0a !important;
   }
 
   .orbit-tech span.glass-panel {
-    background: var(--mglass-bg) !important;
-    color: var(--mglass-text) !important;
-  }
-
-  /* Micro-interactions */
-  .orbit-tech:active,
-  .intro-nav__link:active {
-    transform: scale(0.98);
-    transition: transform 250ms ease-in-out;
-  }
-
-  .agent-tab {
-    background: rgba(255, 255, 255, 0.14) !important;
-    border: 1px solid var(--mglass-border) !important;
-    backdrop-filter: blur(28px) !important;
-  }
-
-  .agent-tab__label {
-    color: var(--mglass-text) !important;
-  }
-
-  .agent-tab__hint {
-    color: var(--mglass-text-muted) !important;
-  }
-
-  .agent-popup__panel {
-    background: rgba(255, 255, 255, 0.14) !important;
-    border: 1px solid var(--mglass-border) !important;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .contact-chip:active,
-    .helping-agent__send:active,
-    .orbit-tech:active,
-    .agent-tab:active {
-      transform: none;
-    }
+    color: #0a0a0a !important;
+    font-weight: 600 !important;
+    border: 1px solid rgba(37, 99, 235, 0.35) !important;
   }
 }

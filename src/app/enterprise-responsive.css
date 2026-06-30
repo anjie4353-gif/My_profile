@@ -114,12 +114,14 @@ body {
   .intro-hero__grid {
     padding-left: 1rem;
     padding-right: 1rem;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .intro-portrait-wrap {
-    max-width: min(100%, 280px);
-    height: min(58vh, 420px);
+    width: 200px;
+    max-width: 200px;
+    height: 260px;
+    margin-inline: auto;
   }
 
   .intro-nav__inner {

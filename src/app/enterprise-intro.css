@@ -7,9 +7,9 @@ html {
   --bg-base: #f7f8fa;
   --bg-mesh-1: #e8ecf1;
   --bg-mesh-2: #d4dce6;
-  --text-primary: #0a0a0a;
-  --text-muted: #1f1f1f;
-  --text-body: #111111;
+  --text-primary: #000000;
+  --text-muted: #1a1a1a;
+  --text-body: #0a0a0a;
   --border: rgba(10, 10, 10, 0.12);
   --accent: #2563eb;
   --spark: rgba(37, 99, 235, 0.45);
@@ -217,6 +217,11 @@ html {
   align-items: flex-end;
   justify-content: center;
   filter: contrast(1.02) saturate(1.04);
+  border: 2px solid rgba(37, 99, 235, 0.35);
+  border-radius: 14px;
+  padding: 0.35rem;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
 }
 
 @media (min-width: 1024px) {
@@ -283,10 +288,10 @@ html {
 .intro-kicker {
   font-family: var(--font-dm), system-ui, sans-serif;
   font-size: 0.6rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-primary);
   margin: 0 0 1.25rem;
 }
 
@@ -321,9 +326,12 @@ html {
   font-family: var(--font-dm), system-ui, sans-serif;
   font-size: clamp(0.72rem, 1.6vw, 0.88rem);
   line-height: 1.75;
-  color: var(--text-body);
+  color: var(--text-primary);
+  font-weight: 600;
   max-width: 520px;
   margin: 0 0 1.75rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
 }
 
 .intro-descriptor__lead {
