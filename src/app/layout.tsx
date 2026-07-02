@@ -5,6 +5,7 @@ import "./enterprise-intro.css";
 import "./enterprise-theme.css";
 import "./enterprise-mobile-glass.css";
 import "./enterprise-responsive.css";
+import "./enterprise-premium.css";
 
 const inter = Inter({
   variable: "--font-inter",

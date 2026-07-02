@@ -25,7 +25,7 @@ const QUESTION_MAP: { pattern: RegExp; intent: QuestionIntent; featured: string 
     featured: FEATURED_QUESTIONS[0],
   },
   {
-    pattern: /strongest technical skills|technical skills/i,
+    pattern: /strongest skills|strongest technical skills|technical skills/i,
     intent: "skills",
     featured: FEATURED_QUESTIONS[1],
   },
@@ -45,18 +45,18 @@ const QUESTION_MAP: { pattern: RegExp; intent: QuestionIntent; featured: string 
     featured: FEATURED_QUESTIONS[4],
   },
   {
-    pattern: /60 second|summarize this candidate|minute pitch/i,
-    intent: "summary60",
+    pattern: /recommend interviewing|would you recommend|should we interview/i,
+    intent: "recommend",
     featured: FEATURED_QUESTIONS[5],
   },
   {
-    pattern: /top strengths|key strengths/i,
-    intent: "strengths",
+    pattern: /60 second|summarize this candidate|summarize his profile|one minute|minute pitch/i,
+    intent: "summary60",
     featured: FEATURED_QUESTIONS[6],
   },
   {
-    pattern: /recommend interviewing|would you recommend|should we interview/i,
-    intent: "recommend",
+    pattern: /top strengths|key strengths|key achievements|achievements/i,
+    intent: "strengths",
     featured: FEATURED_QUESTIONS[7],
   },
   {

@@ -103,8 +103,8 @@ export function Chapter6TechConstellation() {
                     y1="260"
                     x2={x}
                     y2={y}
-                    stroke="#0a0a0a"
-                    strokeOpacity="0.28"
+                    stroke="#f8fafc"
+                    strokeOpacity="0.2"
                     strokeWidth="1"
                   />
                 );
@@ -113,7 +113,7 @@ export function Chapter6TechConstellation() {
           </svg>
 
           <div className="constellation-core absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-[#2563eb]/15 border-2 border-[#2563eb] flex items-center justify-center z-10">
-            <span className="font-mono text-[8px] text-[#0a0a0a] text-center leading-tight font-semibold">
+            <span className="font-mono text-[8px] text-white/80 text-center leading-tight font-semibold">
               CORE
               <br />
               ENGINE
@@ -131,8 +131,8 @@ export function Chapter6TechConstellation() {
                 style={{
                   width: orbit.radius * 2,
                   height: orbit.radius * 2,
-                  borderColor: "#0a0a0a",
-                  opacity: 0.22,
+                  borderColor: "rgba(255,255,255,0.2)",
+                  opacity: 0.35,
                 }}
               />
               {orbit.techs.map((tech, i) => {
@@ -140,7 +140,7 @@ export function Chapter6TechConstellation() {
                 return (
                   <button
                     key={tech}
-                    className={`orbit-tech absolute ${orbit.size} font-mono text-[#0a0a0a] hover:text-[#2563eb] transition-colors cursor-pointer z-[2]`}
+                    className={`orbit-tech absolute ${orbit.size} font-mono text-white/70 hover:text-primary transition-colors cursor-pointer z-[2]`}
                     style={{
                       left: `calc(50% + ${x}px)`,
                       top: `calc(50% + ${y}px)`,

@@ -40,10 +40,11 @@ export function MagneticButton({
   };
 
   const baseClass = cn(
-    "glass-panel relative inline-flex items-center gap-2 px-6 py-3",
-    "text-sm font-semibold tracking-wide text-[#0a0a0a]",
-    "transition-all duration-300 hover:text-[#2563eb]",
-    "hover:border-[#2563eb]/40 hover:shadow-[0_4px_20px_rgba(37,99,235,0.12)]",
+    "glass-panel relative inline-flex items-center gap-2 px-6 py-3 rounded-full",
+    "text-sm font-semibold tracking-wide text-white/90",
+    "transition-all duration-300 hover:text-primary",
+    "hover:border-primary/40 hover:shadow-[0_4px_20px_rgba(59,130,246,0.2)]",
+    "active:scale-[0.98]",
     className
   );
 

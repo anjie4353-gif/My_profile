@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, type FormEvent } from "react";
 import { SITE } from "@/lib/site-config";
 import { AGENT_INTRO, FEATURED_QUESTIONS } from "@/lib/talent-agent";
+import { AgentAnswer } from "@/components/hero/AgentAnswer";
 
 interface Message {
   role: "user" | "agent";
@@ -115,7 +116,7 @@ function AgentPanel({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="helping-agent__suggestions" aria-label="Suggested recruiter questions">
-          <p className="helping-agent__suggestions-label">Suggested Questions</p>
+          <p className="helping-agent__suggestions-label">Recruiter Quick Questions</p>
           <div className="helping-agent__chips">
             {FEATURED_QUESTIONS.map((q) => (
               <button
@@ -132,14 +133,18 @@ function AgentPanel({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="helping-agent__messages" aria-live="polite">
-          {messages.map((msg, i) => (
-            <div
-              key={`${msg.role}-${i}`}
-              className={`helping-agent__msg helping-agent__msg--${msg.role}`}
-            >
-              {msg.text}
-            </div>
-          ))}
+          {messages.map((msg, i) =>
+            msg.role === "agent" && i > 0 ? (
+              <AgentAnswer key={`${msg.role}-${i}`} text={msg.text} />
+            ) : (
+              <div
+                key={`${msg.role}-${i}`}
+                className={`helping-agent__msg helping-agent__msg--${msg.role}`}
+              >
+                {msg.text}
+              </div>
+            )
+          )}
           {loading && (
             <p className="helping-agent__typing" aria-busy="true">
               Composing from resume facts…

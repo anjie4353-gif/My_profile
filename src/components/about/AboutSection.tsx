@@ -26,7 +26,7 @@ export function AboutSection() {
         <div className="about-layout">
           <div className="about-journey" aria-label="Career journey milestones">
             <svg className="about-journey__path" viewBox="0 0 4 480" preserveAspectRatio="none" aria-hidden>
-              <line x1="2" y1="0" x2="2" y2="480" stroke="#0a0a0a" strokeOpacity="0.15" strokeWidth="2" strokeDasharray="6 8" />
+              <line x1="2" y1="0" x2="2" y2="480" stroke="#f8fafc" strokeOpacity="0.15" strokeWidth="2" strokeDasharray="6 8" />
             </svg>
 
             <ul className="about-journey__list">

@@ -1,12 +1,12 @@
 export const FEATURED_QUESTIONS = [
   "Why should we consider Anjaneyulu?",
-  "What are his strongest technical skills?",
+  "What are his strongest skills?",
   "What makes him stand out?",
   "What projects demonstrate his expertise?",
   "What business value can he bring?",
-  "Summarize this candidate in 60 seconds.",
-  "What are his top strengths?",
   "Would you recommend interviewing him?",
+  "Summarize his profile in one minute.",
+  "What are his key achievements?",
 ] as const;
 
 export const AGENT_INTRO = `Hello — I'm the AI Talent Assistant for Anjaneyulu Pallepagu.
